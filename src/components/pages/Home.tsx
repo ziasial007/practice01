@@ -8,8 +8,11 @@ import { FaReact } from "react-icons/fa6";
 
 
 export const Home = () => {
-    const { darkMode } = useContext(myData)
-    
+    const context = useContext(myData);
+    if (!context) return null;
+    const { darkMode } = context;
+
+
     return (
         <>
 

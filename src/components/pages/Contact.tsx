@@ -4,7 +4,10 @@ import { myData } from "../../contextapi/ContextData"
 
 const Contact = () => {
 
-    const {darkMode}=useContext(myData)
+    const context = useContext(myData);
+if (!context) return null;
+const { darkMode } = context;
+
     return (
         <>
 

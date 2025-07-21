@@ -1,5 +1,3 @@
-
-import { IoIosSearch } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { MdAccountCircle } from "react-icons/md";
 import { useContext, useEffect, useRef, useState } from "react";
