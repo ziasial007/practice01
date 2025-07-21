@@ -8,9 +8,11 @@ if (!context) return null;
 const { darkMode } = context;
     return (
         <>
-            <div className={`max-w-3xl mx-auto px-4 py-12 text-center ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
-                <h1 className="text-4xl font-bold mb-6">About Us</h1>
-                <p className="text-lg text-gray-700 mb-4">
+
+            <div className={`main w-full  p- min-h-[100vh] flex justify-center items-center  bg-[#1A1D23] }`}>
+            <div className={`max-w-3xl mx-auto px-4 min-h-[80vh] text-center rounded  ${darkMode ? 'bg-[#1A1D23] text-white' : 'bg-[#989a9e] text-black'} `}>
+                <h1 className="text-4xl font-bold m-4">About Us</h1>
+                <p className="text-lg text-gray-700 ">
                     Welcome to our React-based project! This application is built using modern web technologies to provide users with a fast, interactive, and seamless experience.
                 </p>
                 <p className="text-lg text-gray-700 mb-4">
@@ -19,6 +21,7 @@ const { darkMode } = context;
                 <p className="text-lg text-gray-700">
                     This project is designed and maintained by passionate developers who love building beautiful web experiences. Stay tuned for updates and new features!
                 </p>
+            </div>
             </div>
 
         </>
