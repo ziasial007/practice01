@@ -5,7 +5,7 @@ export const myData = createContext(null)
 
 export const ContextData = ({ children }: any) => {
 
-    const [darkMode, setDarkMode] = useState(false)
+    const [darkMode, setDarkMode] = useState(null)
     // console.log(darkMode);
     
 
