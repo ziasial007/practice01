@@ -7,12 +7,15 @@ import { myData } from "../../contextapi/ContextData";
 
 const Navbar = () => {
 
-    const {darkMode}=useContext(myData)
+    // const {darkMode}=useContext(myData)
+    const context = useContext(myData);
+if (!context) return null; // or throw error
+const { darkMode } = context;
 
     const [menu, setMenu] = useState(false)
 
     const [show, setShow] = useState(false)
-    const dropdownRef = useRef<HTMLDivElement>(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
     const menuRef = useRef(null)
     useEffect(() => {
         const outsideClick = (e: MouseEvent) => {
