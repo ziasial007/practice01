@@ -3,6 +3,9 @@ import { myData } from "../../contextapi/ContextData"
 import About from "./Contact"
 import Contact from "./About"
 import { FaReact } from "react-icons/fa6";
+import SignIn from "../../adminPages/SignIn";
+import JoinNow from "../../adminPages/JoinNow";
+import Data from "../Inputs/Data";
 
 
 
@@ -17,8 +20,8 @@ export const Home = () => {
     return (
         <>
 
-            <div className={`w-full h-[100vh]  ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
-                <div className="main flex justify-center items-center flex-col h-[100vh] mx-[20px]  ">
+            <div className={`w-full min-h-[100vh]  ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
+                <div className="main flex justify-center items-center flex-col min-h-[100vh] mx-[20px]  ">
                     <div className="icon text-[100px]">
                         <FaReact />
                     </div>
@@ -31,12 +34,12 @@ export const Home = () => {
 
                 </div>
             </div>
-
-
             <div className="flex justify-center flex-col items-center">
                 <About />
                 <Contact />
-                {/* <SignIn /> */}
+                <SignIn />
+                <JoinNow />
+                <Data />
             </div>
         </>
     )

@@ -14,8 +14,8 @@ const { darkMode } = context;
             <div className={`main  w-full min-h-[100vh]   ${darkMode ? 'bg-black text-white'  :'bg-white text-black'}`}>
                 <div className="blue h-[10vh] relative bg-blue-600"></div>
                 
-                <div className="second mx-auto m-6 h-[100vh] top-22 rounded shadow flex flex-col justify-center items-center md:shadow-black  md:w-[60%] w-[95%]">
-                    <div className="md:text-[48px] text-[39px] font-bold text-center ">
+                <div className="second mx-auto m-6 min-h-[100vh] top-22 rounded shadow flex flex-col justify-center items-center md:shadow-black  md:w-[60%] w-[95%]">
+                    <div className="md:text-[48px] text-[39px]  font-bold text-center ">
                         <h2>Get in Tuch</h2>
                         <p className="text-[13px] text-center text-gray-400 tracking-[0.5em]">afsfaf asdfa faff</p>
                     </div>

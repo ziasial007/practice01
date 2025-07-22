@@ -4,6 +4,7 @@
 import { useContext } from "react";
 import { RiAccountBox2Line } from "react-icons/ri";
 import { myData } from "../contextapi/ContextData";
+import Social from "./Social";
 
 
 const JoinNow = () => {
@@ -36,13 +37,13 @@ const JoinNow = () => {
                             </label>
                             <div className="flex items-center border-b border-gray-200 py-1 text-gray-600 ">
                                 <RiAccountBox2Line className="text-[20px] text-gray-500" />
-                                <input type="password" name="" id="password" placeholder="Type your Email" className="block outline-non text-gray-600 p-2 w-[60%] outline-none " />
+                                <input type="password" name="" id="Email" placeholder="Type your Email" className="block outline-non text-gray-600 p-2 w-[60%] outline-none " />
                             </div>
                         </div>
                       
                     </form>
-                    <button className="font-semibold bg-green-400 md:w-[400px] min-w-[250px] flex py-2 rounded-2xl mx-auto justify-center mb-10">Sign Up</button>
-
+                    <button className="font-semibold bg-green-400  md:w-[350px] min-w-[250px] flex py-2 rounded-2xl mx-auto justify-center mb-10">Sign Up</button>
+<Social/>
                 </div>
             </div>
 

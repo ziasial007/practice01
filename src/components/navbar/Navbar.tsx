@@ -50,7 +50,7 @@ const Navbar = () => {
             <div className={`nav h-[60px] shadow z-20  fixed flex justify-between px-[10px] items-center w-full ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
                 <div className="leftNav flex gap-[40px] items-center">
                     <div className="logo md:text-[18px] text-[14px] ">
-                        <a href="#"> <span className="flex flex-col ">
+                        <a href="/"> <span className="flex flex-col ">
                             Zia Sial
                             <span className="text-[10px]">Developer</span>
                         </span></a>

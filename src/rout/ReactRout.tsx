@@ -15,7 +15,7 @@ const ReactRout = () => {
     return (
         <>
             <Navbar />
-            <div className="pt-15">
+            <div className="pt-15 ">
             <Routes >
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
