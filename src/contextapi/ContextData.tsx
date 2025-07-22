@@ -1,26 +1,23 @@
-import { createContext, useState, type ReactNode } from "react";
+import { createContext,  useState, type ReactNode } from "react";
 
-// Step 1: Define the type for your context value
 type GlobalContextType = {
   darkMode: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-// Step 2: Create context with initial value as null (with typing)
-export const myData = createContext<GlobalContextType | null>(null);
+// Provide a default value
+export const myData = createContext<GlobalContextType>({
+  darkMode: false,
+  setDarkMode: () => {}
+});
 
-// Step 3: Create provider component with proper typing
 export const ContextData = ({ children }: { children: ReactNode }) => {
-  const [darkMode, setDarkMode] = useState<boolean>(false); // default is light mode
-
-  const globalData = { darkMode, setDarkMode };
+  const [darkMode, setDarkMode] = useState<boolean>(false);
 
   return (
-    <myData.Provider value={globalData}>
+    <myData.Provider value={{ darkMode, setDarkMode }}>
       <div
-        className={
-          darkMode === true ? "bg-black text-white" : "bg-white text-black"
-        }
+        className={darkMode ? "bg-black text-white" : "bg-white text-black"}
         style={{ height: "100vh" }}
       >
         {children}
