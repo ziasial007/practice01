@@ -4,6 +4,8 @@ import { Home } from "../components/pages/Home"
 import Navbar from "../components/navbar/Navbar"
 import About from "../components/pages/About"
 import Contact from "../components/pages/Contact"
+import SignIn from "../adminPages/SignIn"
+import JoinNow from "../adminPages/JoinNow"
 
 
 
@@ -18,6 +20,8 @@ const ReactRout = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/signin" element={<SignIn />} />
+                <Route path="/joinnow" element={<JoinNow />} />
             </Routes>
             </div>
 

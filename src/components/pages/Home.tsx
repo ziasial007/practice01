@@ -3,6 +3,7 @@ import { myData } from "../../contextapi/ContextData"
 import About from "./Contact"
 import Contact from "./About"
 import { FaReact } from "react-icons/fa6";
+import SignIn from "../../adminPages/SignIn";
 
 
 
@@ -35,6 +36,7 @@ export const Home = () => {
             <div className="flex justify-center flex-col items-center">
                 <About />
                 <Contact />
+                {/* <SignIn /> */}
             </div>
         </>
     )

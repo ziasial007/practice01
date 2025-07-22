@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdAccountCircle } from "react-icons/md";
 import { useContext, useEffect, useRef, useState } from "react";
 import DarkMode from "../theme/Darkmode";
@@ -7,6 +7,15 @@ import { myData } from "../../contextapi/ContextData";
 
 const Navbar = () => {
 
+   const navigate=useNavigate()
+   const gotoSignIn =()=>{
+    navigate('/signin')
+   }
+   const navigate1=useNavigate();
+   const gotoJoinNow =()=>{
+    navigate1('/joinnow')
+   }
+   
     // const {darkMode}=useContext(myData)
     const context = useContext(myData);
 if (!context) return null; // or throw error
@@ -68,8 +77,8 @@ const { darkMode } = context;
                 <div className="rightNav flex gap-[35px] items-center relative">
 
                     <div className="md:flex hidden gap-[30px]  ">
-                        <button className="border px-5 py-2.5 rounded cursor-pointer  hover:bg-[#3A4F39] transition-all hover:text-white border-black">Sign in</button>
-                        <button className="hover:bg-[#3A4F39] px-5 py-2.5 rounded cursor-pointer hover:text-white  border border-black transition-all">Join Now</button>
+                        <button className="border px-5 py-2.5 rounded cursor-pointer  hover:bg-[#3A4F39] transition-all hover:text-white border-black" onClick={gotoSignIn}>Sign in</button>
+                        <button className="hover:bg-[#3A4F39] px-5 py-2.5 rounded cursor-pointer hover:text-white  border border-black transition-all"onClick={gotoJoinNow}>Join Now</button>
                     </div>
 
                     <div className="block md:hidden text-[25px] ps-[10px]">
@@ -78,8 +87,8 @@ const { darkMode } = context;
                     {show && (
 
                         <div ref={dropdownRef} className="md:flex w-[100px] top-[43px] absolute  right-6 bg-white flex justify-center flex-col border z-10">
-                            <button className="  md:rounded  cursor-pointer transition-all text-black border-black">Sign in</button>
-                            <button className="bg-[#3A4F39] text-black w-full flex justify-center md:px-5 md:rounded rounded-none cursor-pointer hover:bg-transparent border-non md:border  border-black transition-all">Join Now</button>
+                            <button className="  md:rounded  cursor-pointer transition-all text-black border-black" onClick={gotoSignIn}>Sign in</button>
+                            <button className="bg-[#3A4F39] text-black w-full flex justify-center md:px-5 md:rounded rounded-none cursor-pointer hover:bg-transparent border-non md:border  border-black transition-all" onClick={gotoJoinNow}>Join Now</button>
                         </div>
                     )}
 

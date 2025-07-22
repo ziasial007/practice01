@@ -4,15 +4,17 @@ import { RiAccountBox2Line } from "react-icons/ri";
 import { myData } from "../contextapi/ContextData";
 
 
-const Lognin = () => {
+const SignIn = () => {
     const context = useContext(myData);
-if (!context) return null;
-const { darkMode } = context;
+    if (!context) return null;
+    const { darkMode } = context;
+   
+    
 
     return (
         <>
-            <div className={`main   h-[100vh] flex justify-center items-center pt-[0px]  ${darkMode ? 'bg-black text-white' : 'bg-linear-to-r from-cyan-500 to-blue-500'}`}>
-                <div className={`login md:w-[40%] w-full  h-[95vh] mx-auto rounded shadow-2xl shadow-white ${darkMode ? 'bg-black text-white' : ' bg-white text-black'}`}>
+            <div className={`main   h-[100vh] flex justify-center items-center pt-[0px] w-full  ${darkMode ? 'bg-black text-white' : 'bg-linear-to-r from-cyan-500 to-blue-500'}`}>
+                <div className={`login md:w-[50%] w-[90%] h-[95vh] mx-auto rounded shadow-2xl shadow-white ${darkMode ? 'bg-black text-white' : ' bg-white text-black'}`}>
                     <div className="content text-center pt-6">
                         <h2 className="text-[49px]">Login</h2>
                     </div>
@@ -38,7 +40,7 @@ const { darkMode } = context;
                         <span className="text-right text-gray-600 font-[300] text-[14px] mt-2 cursor-pointer hover:text-blue-500">forgit Password?</span>
                     </form>
                     <button className="font-semibold bg-amber-400 md:w-[400px] min-w-[250px] flex py-2 rounded-2xl mx-auto justify-center mb-10">LOGIN</button>
-                   
+
                 </div>
             </div>
 
@@ -47,4 +49,4 @@ const { darkMode } = context;
         </>
     )
 }
-export default Lognin
+export default SignIn
